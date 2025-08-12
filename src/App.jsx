@@ -29,6 +29,11 @@ function App() {
         sender: 'bot'
       };
       setMessages(prevMessages => [...prevMessages, botResponse]);
+
+      // Scroll the chat window to the bottom after bot responds
+      if (chatWindowRef.current) {
+        chatWindowRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      }
     }, 1000);
   };
 
