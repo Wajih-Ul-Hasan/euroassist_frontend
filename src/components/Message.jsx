@@ -1,26 +1,16 @@
-import React from "react";
-import { User, Bot } from "lucide-react";
+import React from 'react';
 
-const Message = ({ text, sender }) => {
-  const isUser = sender === "user";
+const Message = ({ message }) => {
+  const { text, sender } = message;
+  const isUser = sender === 'user';
+
   return (
-    <div
-      className={`d-flex mb-3 ${
-        isUser ? "justify-content-end" : "justify-content-start"
-      }`}
-    >
+    <div className={`d-flex mb-3 ${isUser ? 'justify-content-end' : 'justify-content-start'}`}>
       <div
-        className={`d-flex align-items-center ${
-          isUser ? "bg-primary text-white" : "bg-light text-dark"
-        } p-2 rounded`}
-        style={{ maxWidth: "70%" }}
+        className={`p-3 rounded-3 message-bubble ${isUser ? 'bg-primary text-white user-bubble' : 'bg-secondary text-white bot-bubble'}`}
+        style={{ maxWidth: '75%' }}
       >
-        {isUser ? (
-          <User size={20} className="me-2" />
-        ) : (
-          <Bot size={20} className="me-2" />
-        )}
-        <span>{text}</span>
+        {text}
       </div>
     </div>
   );

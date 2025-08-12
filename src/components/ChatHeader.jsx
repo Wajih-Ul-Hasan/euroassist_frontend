@@ -1,17 +1,12 @@
-import React from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
-import { Settings, User } from "lucide-react";
+import React from 'react';
 
-const ChatHeader = ({ isSidebarOpen }) => (
-  <Navbar className="chat-header" style={{ left: isSidebarOpen ? "280px" : "80px" }}>
-    <Container fluid>
-      <Navbar.Brand>Current Conversation</Navbar.Brand>
-      <Nav>
-        <Nav.Link><Settings size={20} /></Nav.Link>
-        <Nav.Link><User size={20} /></Nav.Link>
-      </Nav>
-    </Container>
-  </Navbar>
-);
+const ChatHeader = () => {
+  return (
+    <div className="bg-dark text-white text-center py-3 mb-3 shadow-sm">
+      <h4 className="mb-0">🤖 EuroAssist.ai</h4>
+      <small className="text-white-50">Your Guide to European Universities</small>
+    </div>
+  );
+};
 
 export default ChatHeader;

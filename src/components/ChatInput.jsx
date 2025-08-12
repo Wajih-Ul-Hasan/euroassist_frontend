@@ -1,32 +1,36 @@
-import React, { useState } from "react";
-import { Send } from "lucide-react";
+// src/components/UserInput.js
+import React, { useState } from 'react';
+import { Form, Button, InputGroup } from 'react-bootstrap';
 
-const ChatInput = ({ onSend }) => {
-  const [input, setInput] = useState("");
+const ChatInput = ({ onSendMessage }) => {
+  const [input, setInput] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!input.trim()) return;
-    onSend(input);
-    setInput("");
+    if (input.trim()) {
+      onSendMessage(input.trim());
+      setInput('');
+    }
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="d-flex border-top p-2 bg-white"
-    >
-      <input
-        type="text"
-        className="form-control me-2"
-        placeholder="Type your message..."
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-      />
-      <button className="btn btn-primary" type="submit">
-        <Send size={20} />
-      </button>
-    </form>
+    <div className="p-3 bg-dark">
+      <Form onSubmit={handleSubmit}>
+        <InputGroup>
+          <Form.Control
+            type="text"
+            placeholder="Ask about universities, fees, scholarships..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            className="bg-dark text-white border-secondary"
+            style={{'::placeholder': { color: '#6c757d' }}}
+          />
+          <Button variant="primary" type="submit">
+            Send
+          </Button>
+        </InputGroup>
+      </Form>
+    </div>
   );
 };
 
