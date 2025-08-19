@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { InputGroup, FormControl, Button } from 'react-bootstrap';
+import { FormControl, Button } from 'react-bootstrap';
+import { FaPaperPlane } from 'react-icons/fa';
 
 const ChatInput = ({ onSend }) => {
   const [input, setInput] = useState('');
@@ -11,21 +12,28 @@ const ChatInput = ({ onSend }) => {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter') handleSend();
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSend();
+    }
   };
 
   return (
-    <div className="chat-input p-3 border-top bg-dark">
-      <InputGroup>
+    <div className="chat-input-wrapper bg-dark px-3 py-3 border-top">
+      <div className="chat-input-inner mx-auto d-flex align-items-center">
         <FormControl
+          as="textarea"
+          rows={1}
           placeholder="Type your message..."
-          className="bg-dark text-white border-secondary"
+          className="chat-input-textarea me-2"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKeyDown}
         />
-        <Button variant="success" onClick={handleSend}>→</Button>
-      </InputGroup>
+        <Button variant="success" className="chat-send-btn" onClick={handleSend}>
+          <FaPaperPlane />
+        </Button>
+      </div>
     </div>
   );
 };

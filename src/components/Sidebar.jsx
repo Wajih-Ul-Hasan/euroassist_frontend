@@ -4,7 +4,6 @@ import { FaPlus, FaCommentDots, FaSearch } from 'react-icons/fa';
 
 const Sidebar = () => {
   const [chats] = useState([
-    'My Chat #1',
     'Project Ideas',
     'Daily Tasks',
     'Meeting Notes',
@@ -15,38 +14,25 @@ const Sidebar = () => {
   const [activeChat, setActiveChat] = useState('My Chat #1');
 
   return (
-    <div className="bg-dark text-white p-3 d-flex flex-column h-100">
+    <div className="sidebar bg-dark text-white d-flex flex-column h-100 p-3">
       {/* New Chat Button */}
-      <Button variant="success" className="w-100 mb-3 d-flex align-items-center justify-content-center">
+      <Button variant="outline-light" className="new-chat-btn mb-3 d-flex align-items-center justify-content-center">
         <FaPlus className="me-2" />
         New Chat
       </Button>
-
-      {/* Search Input */}
-      <InputGroup className="mb-3">
-        <InputGroup.Text className="bg-secondary text-white border-0">
-          <FaSearch />
-        </InputGroup.Text>
-        <FormControl
-          placeholder="Search chats"
-          className="bg-dark text-white border-0"
-        />
-      </InputGroup>
-
       {/* Chat List */}
-      <div style={{ flex: 1, overflowY: 'auto' }}>
+      <div className="flex-grow-1 overflow-auto">
         <ListGroup variant="flush">
           {chats.map((chat, index) => (
             <ListGroup.Item
               key={index}
-              className={`bg-dark text-white border-0 d-flex align-items-center chat-item ${
+              className={`chat-list-item d-flex align-items-center ${
                 activeChat === chat ? 'active-chat' : ''
               }`}
               onClick={() => setActiveChat(chat)}
-              style={{ cursor: 'pointer' }}
             >
               <FaCommentDots className="me-2 text-secondary" />
-              {chat}
+              <span className="text-truncate">{chat}</span>
             </ListGroup.Item>
           ))}
         </ListGroup>
