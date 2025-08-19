@@ -1,20 +1,19 @@
-import React, { useRef, useEffect } from 'react';
-import Message from './Message';
+import React from 'react';
 
 const ChatWindow = ({ messages }) => {
-  const endOfMessagesRef = useRef(null);
-
-  // Automatically scroll to the latest message
-  useEffect(() => {
-    endOfMessagesRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
-
   return (
-    <div className="chat-window flex-grow-1 p-3" style={{ overflowY: 'auto' }}>
-      {messages.map((msg, index) => (
-        <Message key={index} message={msg} />
+    <div className="px-4 py-3 d-flex flex-column gap-3">
+      {messages.map((msg, idx) => (
+        <div
+          key={idx}
+          className={`message-bubble ${msg.sender === 'user' ? 'user-message' : 'bot-message'}`}
+        >
+          <div className="sender-label mb-1">
+            {msg.sender === 'user' ? 'You' : 'Assistant'}
+          </div>
+          <div>{msg.text}</div>
+        </div>
       ))}
-      <div ref={endOfMessagesRef} />
     </div>
   );
 };

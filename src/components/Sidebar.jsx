@@ -1,40 +1,56 @@
-// src/components/Sidebar.js
-import React from 'react';
-import { ListGroup } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Button, ListGroup, InputGroup, FormControl } from 'react-bootstrap';
+import { FaPlus, FaCommentDots, FaSearch } from 'react-icons/fa';
 
 const Sidebar = () => {
-  return (
-    <div className="sidebar bg-dark text-white p-3">
-      <h5>Quick Info 📌</h5>
-      <hr className="text-secondary" />
-      <ListGroup variant="flush">
-        <ListGroup.Item action className="bg-dark text-white-50 border-secondary px-2">
-          Top 10 Universities for CS
-        </ListGroup.Item>
-        <ListGroup.Item action className="bg-dark text-white-50 border-secondary px-2">
-          Scholarship Deadlines 2025
-        </ListGroup.Item>
-        <ListGroup.Item action className="bg-dark text-white-50 border-secondary px-2">
-          How to Apply for a Visa
-        </ListGroup.Item>
-        <ListGroup.Item action className="bg-dark text-white-50 border-secondary px-2">
-          Cost of Living in Germany
-        </ListGroup.Item>
-      </ListGroup>
+  const [chats] = useState([
+    'My Chat #1',
+    'Project Ideas',
+    'Daily Tasks',
+    'Meeting Notes',
+    'Travel Plans',
+    'Shopping List'
+  ]);
 
-      <h5 className="mt-4">Featured Universities ✨</h5>
-      <hr className="text-secondary" />
-      <ListGroup variant="flush">
-         <ListGroup.Item action className="bg-dark text-white-50 border-secondary px-2">
-          ETH Zurich
-        </ListGroup.Item>
-        <ListGroup.Item action className="bg-dark text-white-50 border-secondary px-2">
-          University of Cambridge
-        </ListGroup.Item>
-        <ListGroup.Item action className="bg-dark text-white-50 border-secondary px-2">
-          TU Munich
-        </ListGroup.Item>
-      </ListGroup>
+  const [activeChat, setActiveChat] = useState('My Chat #1');
+
+  return (
+    <div className="bg-dark text-white p-3 d-flex flex-column h-100">
+      {/* New Chat Button */}
+      <Button variant="success" className="w-100 mb-3 d-flex align-items-center justify-content-center">
+        <FaPlus className="me-2" />
+        New Chat
+      </Button>
+
+      {/* Search Input */}
+      <InputGroup className="mb-3">
+        <InputGroup.Text className="bg-secondary text-white border-0">
+          <FaSearch />
+        </InputGroup.Text>
+        <FormControl
+          placeholder="Search chats"
+          className="bg-dark text-white border-0"
+        />
+      </InputGroup>
+
+      {/* Chat List */}
+      <div style={{ flex: 1, overflowY: 'auto' }}>
+        <ListGroup variant="flush">
+          {chats.map((chat, index) => (
+            <ListGroup.Item
+              key={index}
+              className={`bg-dark text-white border-0 d-flex align-items-center chat-item ${
+                activeChat === chat ? 'active-chat' : ''
+              }`}
+              onClick={() => setActiveChat(chat)}
+              style={{ cursor: 'pointer' }}
+            >
+              <FaCommentDots className="me-2 text-secondary" />
+              {chat}
+            </ListGroup.Item>
+          ))}
+        </ListGroup>
+      </div>
     </div>
   );
 };

@@ -1,59 +1,40 @@
-// src/App.js
-import React, { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import ChatHeader from './components/ChatHeader';
+import React, { useState } from 'react';
 import Sidebar from './components/Sidebar';
 import ChatWindow from './components/ChatWindow';
 import ChatInput from './components/ChatInput';
+import ChatHeader from './components/ChatHeader'; // ✅ Import your header
 import './index.css';
 
 function App() {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([
+    { sender: 'bot', text: 'Hi! How can I help you today?' }
+  ]);
 
-  useEffect(() => {
-    setMessages([
-      {
-        text: 'Hello! How can I help you with European universities today?',
-        sender: 'bot'
-      }
-    ]);
-  }, []);
+  const handleSendMessage = (userMessage) => {
+    if (!userMessage.trim()) return;
 
-  const handleSendMessage = (text) => {
-    const newUserMessage = { text, sender: 'user' };
-    setMessages(prevMessages => [...prevMessages, newUserMessage]);
+    setMessages((prev) => [...prev, { sender: 'user', text: userMessage }]);
 
     setTimeout(() => {
-      const botResponse = {
-        text: `You asked about "${text}". I am searching for information...`,
-        sender: 'bot'
-      };
-      setMessages(prevMessages => [...prevMessages, botResponse]);
-
-      // Scroll the chat window to the bottom after bot responds
-      if (chatWindowRef.current) {
-        chatWindowRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
-      }
-    }, 1000);
+      setMessages((prev) => [...prev, { sender: 'bot', text: "I'm a dummy assistant 🤖" }]);
+    }, 800);
   };
 
   return (
-    <div className="app-wrapper">
-      <ChatHeader />
-      <Container fluid className="main-content">
-        <Row className="h-100">
-          {/* Sidebar Column */}
-          <Col md={4} lg={3} className="d-none d-md-block p-0">
-            <Sidebar />
-          </Col>
+    <div className="app-container d-flex bg-black text-white">
+      <div className="sidebar-container">
+        <Sidebar />
+      </div>
 
-          {/* Chat Column */}
-          <Col md={8} lg={9} className="p-0 d-flex flex-column chat-container">
-            <ChatWindow messages={messages} />
-            <ChatInput onSendMessage={handleSendMessage} />
-          </Col>
-        </Row>
-      </Container>
+      <div className="chat-container d-flex flex-column">
+        <ChatHeader /> {/* ✅ Place your header here */}
+
+        <div className="chat-window flex-grow-1 overflow-auto">
+          <ChatWindow messages={messages} />
+        </div>
+
+        <ChatInput onSend={handleSendMessage} />
+      </div>
     </div>
   );
 }
