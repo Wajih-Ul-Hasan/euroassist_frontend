@@ -7,8 +7,7 @@ const Message = ({ message }) => {
   return (
     <div className={`d-flex mb-3 ${isUser ? 'justify-content-end' : 'justify-content-start'}`}>
       <div
-        className={`p-3 rounded-3 message-bubble ${isUser ? 'bg-primary text-white user-bubble' : 'bg-secondary text-white bot-bubble'}`}
-        style={{ maxWidth: '75%' }}
+        className={`message-bubble ${isUser ? 'user-message' : 'bot-message'}`}
       >
         {text}
       </div>

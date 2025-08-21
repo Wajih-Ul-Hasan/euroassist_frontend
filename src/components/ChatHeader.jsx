@@ -2,9 +2,9 @@ import React from 'react';
 
 const ChatHeader = () => {
   return (
-    <div className="bg-dark text-white text-center py-3 mt-0 shadow-sm" style={{marginBottom:"0rem"}}>
-      <h4 className="mb-0">🤖 EuroAssist.ai</h4>
-      <small className="text-white-50">Your Guide to European Universities</small>
+    <div className="chat-header-container">
+      <h4 className="chat-header-title">🤖 EuroAssist.ai</h4>
+      <small className="chat-header-subtitle">Your Guide to European Universities</small>
     </div>
   );
 };

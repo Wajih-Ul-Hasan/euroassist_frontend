@@ -19,13 +19,13 @@ const ChatInput = ({ onSend }) => {
   };
 
   return (
-    <div className="chat-input-wrapper bg-dark px-3 py-3 border-top">
-      <div className="chat-input-inner mx-auto d-flex align-items-center">
+    <div className="chat-input-wrapper px-3 py-3">
+      <div className="chat-input-inner mx-auto d-flex align-items-center gap-2">
         <FormControl
           as="textarea"
           rows={1}
           placeholder="Type your message..."
-          className="chat-input-textarea me-2"
+          className="chat-input-textarea"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKeyDown}
