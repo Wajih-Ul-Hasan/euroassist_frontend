@@ -21,13 +21,13 @@ function App() {
   };
 
   return (
-    <div className="app-container d-flex bg-black text-white">
+    <div className="app-container d-flex text-white">
       <div className="sidebar-container">
         <Sidebar />
       </div>
 
       <div className="chat-container d-flex flex-column">
-        <ChatHeader /> {/* ✅ Place your header here */}
+        <ChatHeader /> 
 
         <div className="chat-window flex-grow-1 overflow-auto">
           <ChatWindow messages={messages} />
