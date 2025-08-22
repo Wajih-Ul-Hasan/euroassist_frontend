@@ -22,6 +22,41 @@ body {
   flex-direction: column;
   padding: 10px;
   overflow-y: auto;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 60px; /* shrink */
+}
+
+.collapse-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.sidebar.collapsed .new-chat-btn {
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+
+.sidebar.collapsed .chat-list-item {
+  text-align: center;
+  background-color: transparent;
+}
+
+.icon-with-text {
+  margin-right: 8px; /* spacing between icon and text */
+  font-size: 20px; /* adjust as needed */
+}
+
+.collapse-icon {
+  font-size: 25px; /* adjust as needed */
+  border-radius: 10px;
 }
 
 .new-chat-btn {
@@ -123,8 +158,10 @@ body {
   padding: 16px;
   background-color: #212121;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
 }
+
 
 .chat-input-inner {
   background-color: #303030;
@@ -174,4 +211,11 @@ body {
 
 .chat-send-btn:hover {
   background-color: #299769;
+}
+
+.chat-input-disclaimer {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #9ca3af; /* subtle gray */
+  text-align: center;
 }

@@ -1,23 +1,31 @@
 import React, { useState } from "react";
-import { FaPlus } from "react-icons/fa";
+import {
+  FaEdit,
+  FaComment,
+} from "react-icons/fa";
 
-const Sidebar = () => {
-  const [chats] = useState([
-    "Project Ideas",
-    "Daily Tasks",
-    "Meeting Notes",
-    "Travel Plans",
-    "Shopping List",
-  ]);
+import { GoSidebarExpand, GoSidebarCollapse } from "react-icons/go";
 
-  const [activeChat, setActiveChat] = useState("Project Ideas");
+const Sidebar = ({ chats, activeChat, setActiveChat, onNewChat }) => {
+  const [collapsed, setCollapsed] = useState(false);
 
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${collapsed ? "collapsed" : ""}`}>
+      {/* Collapse/Expand Button */}
+      <button
+        className="collapse-btn"
+        onClick={() => setCollapsed((prev) => !prev)}
+      >
+        {collapsed ? <GoSidebarCollapse className="collapse-icon" /> : <GoSidebarExpand className="collapse-icon" />}
+      </button>
+
       {/* New Chat Button */}
-      <button className="new-chat-btn d-flex align-items-center">
-        <FaPlus className="me-2" />
-        New Chat
+      <button
+        className="new-chat-btn d-flex align-items-center"
+        onClick={onNewChat}
+      >
+        <FaEdit className={!collapsed ? "icon-with-text" : ""} />
+        {!collapsed && "New Chat"}
       </button>
 
       {/* Chat List */}
@@ -30,7 +38,8 @@ const Sidebar = () => {
             }`}
             onClick={() => setActiveChat(chat)}
           >
-            {chat}
+            <FaComment className={!collapsed ? "icon-with-text" : ""} />
+            {!collapsed && chat}
           </button>
         ))}
       </div>

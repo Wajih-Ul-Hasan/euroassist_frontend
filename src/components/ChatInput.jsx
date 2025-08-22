@@ -23,15 +23,22 @@ const ChatInput = ({ onSend }) => {
         <textarea
           rows={1}
           placeholder="Send a message..."
-          className="chat-input-textarea "
+          className="chat-input-textarea"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKeyDown}
         />
-        <button className="chat-send-btn" onClick={handleSend} aria-label="Send message">
+        <button
+          className="chat-send-btn"
+          onClick={handleSend}
+          aria-label="Send message"
+        >
           <FaPaperPlane />
         </button>
       </div>
+
+      {/* Disclaimer text */}
+      <p className="chat-input-disclaimer">EuroAssist.ai can make mistakes.</p>
     </div>
   );
 };
