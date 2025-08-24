@@ -1,0 +1,356 @@
+{
+  "Chat 1": {
+    "messages": [
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "University of Example",
+          "country": "Exampleland",
+          "ranking": "Top 200",
+          "tuition_fee": "€1,500 per semester",
+          "scholarships": [
+            "Merit-based grant",
+            "International student scholarship"
+          ],
+          "description": "A public university with a wide range of programs and international partnerships."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "University of Example",
+          "country": "Exampleland",
+          "ranking": "Top 200",
+          "tuition_fee": "€1,500 per semester",
+          "scholarships": [
+            "Merit-based grant",
+            "International student scholarship"
+          ],
+          "description": "A public university with a wide range of programs and international partnerships."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "University of Example",
+          "country": "Exampleland",
+          "ranking": "Top 200",
+          "tuition_fee": "€1,500 per semester",
+          "scholarships": [
+            "Merit-based grant",
+            "International student scholarship"
+          ],
+          "description": "A public university with a wide range of programs and international partnerships."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "University of Example",
+          "country": "Exampleland",
+          "ranking": "Top 200",
+          "tuition_fee": "€1,500 per semester",
+          "scholarships": [
+            "Merit-based grant",
+            "International student scholarship"
+          ],
+          "description": "A public university with a wide range of programs and international partnerships."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "University of Example",
+          "country": "Exampleland",
+          "ranking": "Top 200",
+          "tuition_fee": "€1,500 per semester",
+          "scholarships": [
+            "Merit-based grant",
+            "International student scholarship"
+          ],
+          "description": "A public university with a wide range of programs and international partnerships."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "University of Example",
+          "country": "Exampleland",
+          "ranking": "Top 200",
+          "tuition_fee": "€1,500 per semester",
+          "scholarships": [
+            "Merit-based grant",
+            "International student scholarship"
+          ],
+          "description": "A public university with a wide range of programs and international partnerships."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "University of Example",
+          "country": "Exampleland",
+          "ranking": "Top 200",
+          "tuition_fee": "€1,500 per semester",
+          "scholarships": [
+            "Merit-based grant",
+            "International student scholarship"
+          ],
+          "description": "A public university with a wide range of programs and international partnerships."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "University of Bologna",
+          "country": "Italy",
+          "ranking": "Top 200 Globally",
+          "tuition_fee": "Varies by program, generally lower than private universities.  Check the specific program for details.",
+          "scholarships": [
+            "Government Scholarships (for EU and non-EU students)",
+            "University-Specific Merit-Based Scholarships",
+            "External Scholarships (e.g., Fulbright, Erasmus+)"
+          ],
+          "description": "One of the oldest and most prestigious universities in the world, offering a wide range of undergraduate and graduate programs in various fields.  Known for its strong research focus and international collaborations."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "University of Bologna",
+          "country": "Italy",
+          "ranking": "Top 200 globally",
+          "tuition_fee": "Varies by program, generally lower for EU students",
+          "scholarships": [
+            "Government scholarships for EU students",
+            "University-specific merit-based scholarships",
+            "External funding opportunities"
+          ],
+          "description": "A prestigious public university with a strong history and a growing reputation in data science, offering various master's and PhD programs in related fields."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "University of Copenhagen",
+          "country": "Denmark",
+          "ranking": "Top 100",
+          "tuition_fee": "Free for EU/EEA students, Varies for international students",
+          "scholarships": [
+            "University of Copenhagen scholarships",
+            "Government grants",
+            "External funding opportunities"
+          ],
+          "description": "A leading public research university with a strong focus on sustainability, innovation and global engagement. Offers a wide range of undergraduate and postgraduate programs."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "Unknown",
+          "country": "Unknown",
+          "ranking": "Unknown",
+          "tuition_fee": "Unknown",
+          "scholarships": [],
+          "description": "Sorry I can't help you in this matter."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "University of Vienna",
+          "country": "Austria",
+          "ranking": "Top 300",
+          "tuition_fee": "Varies by program, generally low for EU students, higher for non-EU students.",
+          "scholarships": [
+            "University of Vienna Scholarships",
+            "OeAD Scholarships",
+            "Erasmus+ Program"
+          ],
+          "description": "A public university with a long and rich history, offering a wide range of undergraduate and postgraduate programs in humanities, social sciences, natural sciences, and medicine."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "Sorbonne University",
+          "country": "France",
+          "ranking": "Top 100",
+          "tuition_fee": "Varies by program, generally low for EU students",
+          "scholarships": [
+            "French government grants",
+            "University-specific scholarships",
+            "Erasmus+ grants"
+          ],
+          "description": "A leading research university in Paris with a wide range of programs and a strong international reputation."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "Unknown",
+          "country": "Unknown",
+          "ranking": "Unknown",
+          "tuition_fee": "Unknown",
+          "scholarships": [],
+          "description": "Sorry I can't help you in this matter."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "",
+          "country": " ",
+          "ranking": " ",
+          "tuition_fee": " ",
+          "scholarships": [],
+          "description": "Sorry I can't help you in this matter."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "",
+          "country": "",
+          "ranking": "",
+          "tuition_fee": "",
+          "scholarships": [],
+          "description": "Sorry I can't help you in this matter."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "",
+          "country": "",
+          "ranking": "",
+          "tuition_fee": "",
+          "scholarships": [],
+          "description": "Sorry I can't help you in this matter."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "",
+          "country": "",
+          "ranking": "",
+          "tuition_fee": "",
+          "scholarships": [],
+          "description": "Sorry I can't help you in this matter."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "",
+          "country": "",
+          "ranking": "",
+          "tuition_fee": "",
+          "scholarships": [],
+          "description": "Sorry I can't help you in this matter."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "",
+          "country": "",
+          "ranking": "",
+          "tuition_fee": "",
+          "scholarships": [],
+          "description": "Sorry I can't help you in this matter."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "",
+          "country": "",
+          "ranking": "",
+          "tuition_fee": "",
+          "scholarships": [],
+          "description": "Sorry I can't help you in this matter."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "",
+          "country": "",
+          "ranking": "",
+          "tuition_fee": "",
+          "scholarships": [],
+          "description": "Sorry I can't help you in this matter."
+        }
+      }
+    ],
+    "meta": {
+      "title": "Sorbonne University Information",
+      "_last_request": {
+        "hash": "{\"q\": \"Hey\"}",
+        "ts": 1756039695.502774,
+        "response": {
+          "result": {
+            "name": "",
+            "country": "",
+            "ranking": "",
+            "tuition_fee": "",
+            "scholarships": [],
+            "description": "Sorry I can't help you in this matter."
+          },
+          "chat_id": "Chat 1",
+          "title": "European University Information"
+        }
+      }
+    }
+  },
+  "Chat 2": {
+    "messages": [
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "University of Bologna",
+          "country": "Italy",
+          "ranking": "Top 200 globally",
+          "tuition_fee": "Varies by program, generally lower for EU students",
+          "scholarships": [
+            "Bologna University Scholarships",
+            "Italian Government Scholarships",
+            "EU-funded programs"
+          ],
+          "description": "One of the oldest universities in the world, offering a wide range of programs in various fields."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "Ludwig Maximilian University of Munich",
+          "country": "Germany",
+          "ranking": "Top 100 Globally",
+          "tuition_fee": "Generally low or no tuition fees for EU/EEA students; fees may apply for non-EU students.",
+          "scholarships": [
+            "DAAD Scholarships",
+            "University-specific scholarships",
+            "Governmental grants"
+          ],
+          "description": "A highly prestigious public research university located in Munich, offering a wide range of undergraduate and postgraduate programs in various disciplines."
+        }
+      },
+      {
+        "sender": "assistant",
+        "text": {
+          "name": "",
+          "country": "",
+          "ranking": "",
+          "tuition_fee": "",
+          "scholarships": [],
+          "description": "Sorry I can't help you in this matter."
+        }
+      }
+    ],
+    "meta": {
+      "title": "European University Information"
+    }
+  }
+}

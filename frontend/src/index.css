@@ -129,6 +129,37 @@ body {
   flex-direction: column;
 }
 
+/* Themed scrollbar for webkit browsers */
+.chat-window::-webkit-scrollbar,
+.sidebar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.chat-window::-webkit-scrollbar-track,
+.sidebar::-webkit-scrollbar-track {
+  background: #171717; /* darker track */
+  border-radius: 10px;
+}
+
+.chat-window::-webkit-scrollbar-thumb,
+.sidebar::-webkit-scrollbar-thumb {
+  background: #343541; /* thumb matches panel color */
+  border-radius: 10px;
+  border: 2px solid #171717; /* padding effect */
+}
+
+.chat-window::-webkit-scrollbar-thumb:hover,
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #4b4d56;
+}
+
+/* Firefox scrollbar colors */
+.chat-window,
+.sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: #343541 #171717;
+}
+
 .message-bubble {
   max-width: 80%;
   padding: 12px 16px;
@@ -211,6 +242,28 @@ body {
 
 .chat-send-btn:hover {
   background-color: #299769;
+}
+
+.chat-send-btn:disabled {
+  background-color: #0f6b4f;
+  cursor: default;
+  opacity: 0.9;
+}
+
+.send-spinner {
+  animation: spin 1s linear infinite;
+}
+
+.send-spinner .path {
+  stroke: #ffffff;
+  stroke-linecap: round;
+  stroke-dasharray: 90;
+  stroke-dashoffset: 0;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .chat-input-disclaimer {

@@ -1,0 +1,8 @@
+flask==2.3.3
+flask-cors==4.0.0
+jsonschema==4.21.0
+python-dotenv==1.0.0
+
+# Optional: uncomment/install a Google Generative AI client if you plan to call Gemini directly
+# Google Generative AI client (used to call Gemini). Install in your venv.
+google-generativeai

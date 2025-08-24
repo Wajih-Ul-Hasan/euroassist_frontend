@@ -4,9 +4,7 @@ import Message from "./Message";
 const ChatWindow = ({ messages = [], isTyping = false }) => {
   const containerRef = useRef(null);
 
-  // Support two shapes for `messages` coming from different frontend/backends:
-  // - an array: [{ sender, text }, ...]
-  // - an object with a `messages` array (newer persisted shape): { messages: [...], meta: { ... } }
+  // Support both array and { messages: [...] } shapes coming from different app copies
   const messageList = Array.isArray(messages)
     ? messages
     : messages && Array.isArray(messages.messages)

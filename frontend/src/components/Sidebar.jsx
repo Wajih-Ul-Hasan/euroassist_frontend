@@ -6,7 +6,7 @@ import {
 
 import { GoSidebarExpand, GoSidebarCollapse } from "react-icons/go";
 
-const Sidebar = ({ chats, activeChat, setActiveChat, onNewChat }) => {
+const Sidebar = ({ chats, activeChat, setActiveChat, onNewChat, summaries = {} }) => {
   const [collapsed, setCollapsed] = useState(false);
 
   return (
@@ -37,9 +37,9 @@ const Sidebar = ({ chats, activeChat, setActiveChat, onNewChat }) => {
               activeChat === chat ? "active-chat" : ""
             }`}
             onClick={() => setActiveChat(chat)}
+            title={summaries[chat] || chat}
           >
-            <FaComment className={!collapsed ? "icon-with-text" : ""} />
-            {!collapsed && chat}
+            {!collapsed && (summaries[chat] || chat)}
           </button>
         ))}
       </div>
